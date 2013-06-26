@@ -14,7 +14,7 @@
 <% @discounts.each do |discount| %>
   <tr>
     <td><%= discount.name %></td>
-    <td><%= discount.logo %></td>
+    <td><%= discount.picture.url(:thumb) %></td>
     <td><%= discount.description %></td>
     <td><%= discount.location %></td>
     <td><%= link_to 'Show', discount %></td>

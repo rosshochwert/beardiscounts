@@ -22,9 +22,8 @@
 
 <p>
   <b>Logos:</b>
-  <%= image_tag @discount.logo.url %>
-<%= image_tag @discount.logo.url(:medium) %>
-<%= image_tag @discount.logo.url(:thumb) %>
+<%= image_tag @discount.picture.url(:medium) %>
+<%= image_tag @discount.picture.url(:thumb) %>
 </p>
 
 <%= link_to 'Edit', edit_discount_path(@discount) %> |
