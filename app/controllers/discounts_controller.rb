@@ -6,7 +6,7 @@ class DiscountsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @discounts }
+      format.json { render json: @discounts, methods: [:picture] }
     end
   end
 
