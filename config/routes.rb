@@ -1,6 +1,11 @@
 Beardiscounts::Application.routes.draw do
-  resources :discounts
+  get "about/index"
 
+  get "index/home"
+
+  resources :discounts
+get 'discounts', to: 'discounts#index'
+get 'about', to: 'about#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -51,7 +56,7 @@ Beardiscounts::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'discounts#index'
+   root :to => 'index#home'
 
   # See how all your routes lay out with "rake routes"
 

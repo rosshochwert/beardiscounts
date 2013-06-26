@@ -1,6 +1,7 @@
 <h1>Listing discounts</h1>
 
-<table>
+<center>
+  <table>
   <tr>
     <th>Name</th>
     <th>Logo</th>
@@ -17,13 +18,14 @@
     <td><%= discount.picture.url(:thumb) %></td>
     <td><%= discount.description %></td>
     <td><%= discount.location %></td>
-    <td><%= link_to 'Show', discount %></td>
-    <td><%= link_to 'Edit', edit_discount_path(discount) %></td>
-    <td><%= link_to 'Destroy', discount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', discount, {:class=>("btn btn-large btn-block btn-primary"), :style=>("width:100px;")} %></td>
+    <td><%= link_to 'Edit', edit_discount_path(discount), { :class=>("btn btn-large btn-block btn-warning"), :style=>("width:100px;") } %></td>s
+    <td><%= link_to 'Destroy', discount, {:class=>("btn btn-large btn-block btn-danger"), :style=>("width:100px;")}, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
+</center>
 <br />
 
-<%= link_to 'New Discount', new_discount_path %>
+<center><%= link_to 'New Discount', new_discount_path, {:class=>("btn btn-large btn-block btn-info"), :style=>("width:300px;")} %>
+</center>
