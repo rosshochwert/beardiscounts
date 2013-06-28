@@ -4,7 +4,8 @@
   <table>
   <tr>
     <th>Name</th>
-    <th>Logo</th>
+    <th>Featured</th>
+    <th>Logo </th>
     <th>Description</th>
     <th>Location</th>
     <th></th>
@@ -15,7 +16,14 @@
 <% @discounts.each do |discount| %>
   <tr>
     <td><%= discount.name %></td>
-    <td><%= discount.picture.url(:thumb) %></td>
+    <td><% if discount.featured %>
+      <%='Yes'%>
+      <%else%>
+      <%='No'%>
+      <%end%>
+    </td>
+    
+    <td><%=image_tag discount.picture.url(:thumb) %></td>
     <td><%= discount.description %></td>
     <td><%= discount.location %></td>
     <td><%= link_to 'Show', discount, {:class=>("btn btn-large btn-block btn-primary"), :style=>("width:100px;")} %></td>
