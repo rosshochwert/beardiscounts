@@ -26,5 +26,11 @@
 <%= image_tag @discount.picture.url(:thumb) %>
 </p>
 
+<p>
+  <b>Phone Number</b>
+<%= @discount.phone %>
+
+</p>
+
 <%= link_to 'Edit', edit_discount_path(@discount) %> |
 <%= link_to 'Back', discounts_path %>
