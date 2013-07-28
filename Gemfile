@@ -31,6 +31,9 @@ gem 'heroku'
 gem "paperclip", "~> 3.0"
 gem 'flatui-rails'
 gem "twitter-bootstrap-rails"
+gem 'aws-sdk'
+gem 'aws-s3'
+
 
 
 # To use ActiveModel has_secure_password

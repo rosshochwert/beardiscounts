@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20130727053016) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.boolean  "featured"
-    t.string "phone"
+    t.string   "phone"
   end
 
 end
