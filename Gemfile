@@ -33,6 +33,8 @@ gem 'flatui-rails'
 gem "twitter-bootstrap-rails"
 gem 'aws-sdk'
 gem 'aws-s3'
+gem 'devise'
+gem 'cancan'
 
 
 

@@ -1,6 +1,9 @@
 <h1>Editing discount</h1>
-
+<% if current_user.admin? %>
 <%= render 'form' %>
 
 <%= link_to 'Show', @discount %> |
 <%= link_to 'Back', discounts_path %>
+<%else%>
+<p>Terribly sorry, but you must be an admin to edit.</p>
+<%end%>

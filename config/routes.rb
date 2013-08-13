@@ -1,4 +1,6 @@
 Beardiscounts::Application.routes.draw do
+  devise_for :users
+
   get "about/index"
 
   get "index/home"

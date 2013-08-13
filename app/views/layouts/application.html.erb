@@ -19,8 +19,7 @@
     <!-- Size should be 144 x 144 pixels -->
     
   </head>
-  <body>
-
+  <body>   
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -35,6 +34,16 @@
               <li><%= link_to "Discounts", "/discounts"  %></li>
               <li><%= link_to "About Page", "/about"  %></li>
             </ul>
+            <ul class="nav pull-right">
+              <% if user_signed_in? %>
+              <li>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+              </li>
+            <% else %>
+              <li>
+              <%= link_to('Login', new_user_session_path)  %>  
+              </li>
+            <% end %>
           </div><!--/.nav-collapse -->
         </div>
       </div>
