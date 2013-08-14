@@ -1,7 +1,7 @@
 class DiscountsController < ApplicationController
   # GET /discounts
   # GET /discounts.json
-  before_filter :authenticate_user!
+
   def index
     @discounts = Discount.all(:order => 'featured DESC')
 
