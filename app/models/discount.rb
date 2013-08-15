@@ -7,7 +7,7 @@ class Discount < ActiveRecord::Base
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "80x80>" }, :default_url => "/images/:style/missing.png"
 
   def self.import(file)
-    CSV.foreach(file.path, headers: true) do |row|
+    CSV.foreach(file.path, :encoding => 'windows-1251:utf-8', headers: true) do |row|
       Discount.create! row.to_hash
     end
   end
