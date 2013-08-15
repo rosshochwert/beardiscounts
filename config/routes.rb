@@ -5,9 +5,12 @@ Beardiscounts::Application.routes.draw do
 
   get "index/home"
 
-  resources :discounts
-get 'discounts', to: 'discounts#index'
-get 'about', to: 'about#index'
+  resources :discounts do
+    collection { post :import }
+  end
+  get 'discounts', to: 'discounts#index'
+  get 'about', to: 'about#index'
+  get 'import', to: 'discounts#import'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

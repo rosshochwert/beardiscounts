@@ -81,4 +81,9 @@ class DiscountsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def import
+  Discount.import(params[:file])
+  redirect_to root_url, notice: "Products imported."
+end
 end

@@ -1,8 +1,17 @@
 <h1>New discount</h1>
-<% if current_user.admin? %>
-<%= render 'form' %>
+<% if (current_user)%>
+	<% if current_user.admin? %>
+		<%= render 'form' %>
 
-<%= link_to 'Back', discounts_path %>
-<%else%>
-<p>Terribly sorry sir, but you must be an admin for this.</p>
+		<%= link_to 'Back', discounts_path %>
+
+		<h2>Import Products</h2>
+
+		<%= form_tag import_discounts_path, multipart: true do %>
+		  <%= file_field_tag :file %>
+		  <%= submit_tag "Import" %>
+		<% end %>
+	<%else%>
+		<p>Terribly sorry sir, but you must be an admin for this.</p>
+	<%end%>
 <%end%>

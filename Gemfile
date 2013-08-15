@@ -36,6 +36,7 @@ gem 'aws-s3'
 gem 'devise'
 gem 'cancan'
 gem 'taps'
+gem 'roo'
 
 
 # To use ActiveModel has_secure_password

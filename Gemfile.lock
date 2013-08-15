@@ -127,6 +127,11 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    roo (1.11.2)
+      nokogiri
+      rubyzip
+      spreadsheet (> 0.6.4)
+    ruby-ole (1.2.11.7)
     rubyzip (0.9.9)
     sass (3.2.9)
     sass-rails (3.2.6)
@@ -136,6 +141,8 @@ GEM
     sequel (3.20.0)
     sinatra (1.0)
       rack (>= 1.0)
+    spreadsheet (0.8.8)
+      ruby-ole (>= 1.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -181,6 +188,7 @@ DEPENDENCIES
   paperclip (~> 3.0)
   pg
   rails (= 3.2.13)
+  roo
   sass-rails (~> 3.2.3)
   sqlite3
   taps
