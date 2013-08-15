@@ -29,8 +29,7 @@
     <td><%= discount.location %></td>
     <td><%= discount.phone %></td>
     <td><%= link_to 'Show', discount, {:class=>("btn btn-large btn-block btn-primary"), :style=>("width:100px;")} %></td>
-    <td><%= link_to 'Edit', edit_discount_path(discount), { :class=>("btn btn-large btn-block btn-warning"), :style=>("width:100px;") } %></td>
-    <td class = "btn btn-large btn-block btn-danger"><%= link_to 'Destroy', discount, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+
   </tr>
 <% end %>
 </table>

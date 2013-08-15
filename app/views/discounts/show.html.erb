@@ -31,6 +31,8 @@
 <%= @discount.phone %>
 
 </p>
-
+    
+<%= link_to 'Edit', edit_discount_path(@discount), { :class=>("btn btn-large btn-block btn-warning"), :style=>("width:100px;") } %>
+    <td class = "btn btn-large btn-block btn-danger"><%= link_to 'Destroy', discount, method: :delete, data: { confirm: 'Are you sure?' }%></td>
 <%= link_to 'Edit', edit_discount_path(@discount) %> |
 <%= link_to 'Back', discounts_path %>
