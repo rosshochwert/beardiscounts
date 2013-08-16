@@ -3,7 +3,7 @@ class DiscountsController < ApplicationController
   # GET /discounts.json
 
   def index
-    @discounts = Discount.all(:order => 'featured DESC')
+    @discounts = Discount.all(:order => 'featured DESC, name')
 
     respond_to do |format|
       format.html # index.html.erb
