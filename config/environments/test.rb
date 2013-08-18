@@ -8,6 +8,7 @@ Beardiscounts::Application.configure do
   config.cache_classes = true
   config.paperclip_defaults = {
   :storage => :s3,
+  :default_url => '/images/missing.png',
   :s3_credentials => {
     :bucket => ENV['AWS_BUCKET'],
     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],

@@ -3,7 +3,7 @@ Beardiscounts::Application.configure do
 
 config.paperclip_defaults = {
   :storage => :s3,
-  :default_url => '/images/:attachment/missing.png',
+  :default_url => '/images/missing.png',
   :s3_credentials => {
     :bucket => 'beardiscounts',
     :access_key_id => 'AKIAIFRD2TQOHCUCJ3AQ',
