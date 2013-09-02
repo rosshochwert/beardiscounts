@@ -7,7 +7,7 @@ class DiscountsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @discounts, methods: [:picture] }
+      format.json { render json: @discounts, :callback => params[:callback], methods: [:picture] }
     end
   end
 
