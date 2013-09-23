@@ -1,7 +1,7 @@
+==
 About
-=======
 This is the backend server for the mobile application for Bear Discounts, a community discount card business. The application lists the current discounts for Bear Discounts and allows users to favorite and save discounts for offline use. Users can view the discounts call the businesses and map a route to the businesses. The app is currently pending review in the Apple store.
 
+==
 Under The Hood
-=======
 This is the backend server for the Bear Discounts app. The server can be reached at beardiscounts.herokuapp.com. The server is a ruby on rails application that uses Devise for authentication and Paperclip for attaching images to the discounts. JSON is listed at beardiscounts.herokuapp.com/discounts.json and it's been customized for the app access. I've implemented an upload feature which allows uploading of CSV files into the sytem. I used Flat-UI-Bootstrap to make things interesting and a Flat-UI toggle switch to make things even better. I may consider implementing backend as a service for the discounts depending on the evolving complexity of the app.
