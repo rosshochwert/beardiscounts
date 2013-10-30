@@ -1,4 +1,7 @@
 Beardiscounts::Application.routes.draw do
+  resources :customers
+
+
   devise_for :users
 
   get "about/index"
@@ -8,7 +11,11 @@ Beardiscounts::Application.routes.draw do
   resources :discounts do
     collection { post :import }
   end
+
   get 'discounts', to: 'discounts#index'
+  get 'discounts/hash/:id', to: 'discounts#hashcode'
+  get 'customers/hash/:hashcode', to: 'customers#hashcode'
+
   get 'about', to: 'about#index'
   get 'import', to: 'discounts#import'
 

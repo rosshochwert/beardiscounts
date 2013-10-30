@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130813012711) do
+ActiveRecord::Schema.define(:version => 20131030172827) do
 
   create_table "businesses", :force => true do |t|
     t.string   "logo"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(:version => 20130813012711) do
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "customers", :force => true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.boolean  "verified"
+    t.string   "hashcode"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "discounts", :force => true do |t|
@@ -39,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20130813012711) do
     t.datetime "picture_updated_at"
     t.boolean  "featured"
     t.string   "phone"
+    t.string   "hashcode"
   end
 
   create_table "users", :force => true do |t|

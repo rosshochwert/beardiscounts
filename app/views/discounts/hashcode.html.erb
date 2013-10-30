@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name HASH:</b>
+  <%= @discount.name %>
+</p>
+
+<p>
+  <b>Logo:</b>
+  <%= @discount.picture.url(:thumb) %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @discount.description %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @discount.location %>
+</p>
+
+<p>
+  <b>Logos:</b>
+<%= image_tag @discount.picture.url(:medium) %>
+<%= image_tag @discount.picture.url(:thumb) %>
+</p>
+
+<p>
+  <b>Phone Number</b>
+<%= @discount.phone %>
+
+</p>
+    
+    <td class = "btn btn-large btn-block btn-danger"><%= link_to 'Destroy', @discount, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+<%= link_to 'Edit', edit_discount_path(@discount) %> |
+<%= link_to 'Back', discounts_path %>

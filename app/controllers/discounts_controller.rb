@@ -22,11 +22,19 @@ class DiscountsController < ApplicationController
     end
   end
 
+  def hashcode
+    @discount = Discount.find_by_hashcode(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @discount }
+    end
+  end
+
   # GET /discounts/new
   # GET /discounts/new.json
   def new
     @discount = Discount.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @discount }
@@ -42,7 +50,6 @@ class DiscountsController < ApplicationController
   # POST /discounts.json
   def create
     @discount = Discount.new(params[:discount])
-
     respond_to do |format|
       if @discount.save
         format.html { redirect_to @discount, notice: 'Discount was successfully created.' }
