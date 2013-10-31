@@ -15,6 +15,8 @@ Beardiscounts::Application.routes.draw do
   get 'discounts', to: 'discounts#index'
   get 'discounts/hash/:id', to: 'discounts#hashcode'
   get 'customers/hash/:hashcode', to: 'customers#hashcode'
+  get 'customers/:id', to: 'customers#index'
+
 
   get 'about', to: 'about#index'
   get 'import', to: 'discounts#import'

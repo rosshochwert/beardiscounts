@@ -1,5 +1,6 @@
 <h1>Listing customers</h1>
-
+<% if (current_user)%>
+<% if current_user.admin? %>
 <table>
   <tr>
     <th>Firstname</th>
@@ -25,5 +26,7 @@
 </table>
 
 <br />
+<%end%>
+<%end%>
 
 <%= link_to 'New Customer', new_customer_path %>

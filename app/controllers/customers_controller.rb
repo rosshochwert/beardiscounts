@@ -1,7 +1,6 @@
 class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
-  http_basic_authenticate_with :name => "frodo", :password => "thering"
 
   def index
     @customers = Customer.all
@@ -18,8 +17,8 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @customer, :callback => params[:callback] }
+      #format.html # show.html.erb
+      #format.json { render json: @customer, :callback => params[:callback] }
     end
   end
 
