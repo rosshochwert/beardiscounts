@@ -26,7 +26,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find_by_hashcode(params[:hashcode])
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @customer }
+      format.json { render json: @customer, :callback => params[:callback]}
     end
   end
 
