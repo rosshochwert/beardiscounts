@@ -1,7 +1,8 @@
 class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
-
+  # http_basic_authenticate_with name: "beardiscounts", password: "Danforth4", except: [:index, :hashcode]
+  
   def index
     @customers = Customer.all
 
@@ -26,7 +27,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find_by_hashcode(params[:hashcode])
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @customer, :callback => params[:callback]}
+      format.json { render json: @customer], :callback => params[:callback]}
     end
   end
 
@@ -89,5 +90,10 @@ class CustomersController < ApplicationController
       format.html { redirect_to customers_url }
       format.json { head :no_content }
     end
+  end
+
+  def import
+    Customer.import(params[:file])
+    redirect_to root_url, notice: "Customers imported and hashes created."
   end
 end

@@ -7,7 +7,7 @@ class DiscountsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @discounts, :callback => params[:callback], methods: [:picture] }
+      format.json { render json: @discounts } #, :callback => params[:callback], methods: [:picture] }
     end
   end
 
@@ -90,7 +90,7 @@ class DiscountsController < ApplicationController
   end
 
   def import
-  Discount.import(params[:file])
-  redirect_to root_url, notice: "Products imported."
-end
+    Discount.import(params[:file])
+    redirect_to root_url, notice: "Products imported."
+  end
 end

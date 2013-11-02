@@ -37,6 +37,7 @@ gem 'devise'
 gem 'cancan'
 gem 'taps'
 gem 'roo'
+gem 'rack-cors'
 
 
 # To use ActiveModel has_secure_password
