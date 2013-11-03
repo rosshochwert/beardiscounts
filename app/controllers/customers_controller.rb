@@ -18,8 +18,8 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
 
     respond_to do |format|
-      #format.html # show.html.erb
-      #format.json { render json: @customer, :callback => params[:callback] }
+      format.html # show.html.erb
+      format.json { render json: @customer}
     end
   end
 
@@ -27,7 +27,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find_by_hashcode(params[:hashcode])
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @customer, :callback => params[:callback]}
+      format.json { render json: @customer}
     end
   end
 
