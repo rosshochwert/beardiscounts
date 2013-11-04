@@ -1,7 +1,7 @@
 class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
-  # http_basic_authenticate_with name: "beardiscounts", password: "Danforth4", except: [:index, :hashcode]
+  http_basic_authenticate_with name: "beardiscounts", password: "Danforth4"#, except: [:index, :hashcode]
   
   def index
     @customers = Customer.all
@@ -23,6 +23,7 @@ class CustomersController < ApplicationController
     end
   end
 
+  # GET /customers/hash/hashCode.json
  def hashcode
     @customer = Customer.find_by_hashcode(params[:hashcode])
     respond_to do |format|
