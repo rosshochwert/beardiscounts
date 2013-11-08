@@ -1,7 +1,7 @@
 class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
-  http_basic_authenticate_with name: "beardiscounts", password: "Danforth4"#, except: [:index, :hashcode]
+  http_basic_authenticate_with name: HIDDEN FOR PRIVACY#, except: [:index, :hashcode]
   
   def index
     @customers = Customer.all
