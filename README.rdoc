@@ -1,6 +1,6 @@
 ==
 About
-This is the backend server for the mobile application for Bear Discounts, a community discount card business. The application lists the current discounts for Bear Discounts and allows users to favorite and save discounts for offline use. Users can view the discounts call the businesses and map a route to the businesses. The app is currently pending review in the Apple store.
+This is the backend server for the mobile application for Bear Discounts, a community discount card business. The application lists the current discounts for Bear Discounts and allows users to favorite and save discounts for offline use. Users can view the discounts call the businesses and map a route to the businesses. The app is in the Apple store!
 
 ==
 Under The Hood
